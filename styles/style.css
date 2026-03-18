@@ -1,39 +1,18 @@
-html {
-  text-align: center;
-  color: white;
-  margin: auto;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body {
-  background-image: url('../images/imginicial.jpg');
-  background-attachment: fixed;
+.estudo-page {
+  background-image: url("../images/ceu.jpg");
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
+  margin: 100px 20px 20px 20px;
+  text-align: center;
 }
 
-.inicio {
-  background-color: white;
-  margin: 10px;
-  padding: 10px;
-  border-radius: 20px;
-  width: 800px;
-  margin: auto;
-  opacity: 0.8;
-}
-
-h1 {
+p {
   color: white;
-  border-bottom: 2px solid white;
-  font-size: 60px;
-}
-h2 {
-  font-size: 40px;
-}
-h3 {
-  color: white;
-  font-size: 20px;
-}
-
-address {
-  padding: 10px;
 }
