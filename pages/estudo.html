@@ -4,16 +4,113 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../styles/style.css" rel="stylesheet" >
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
     <title>Estudo</title>
 </head>
 <body class="estudo-page">
-    <main>
-        <p>Aprofunde o conhecimento da Bíblia. Escolha um estudo para<br>acompanhar online, baixar o material ou solicitar um estudo presencial.</p>
-        <div class="carrossel">
+    
+<!-- NAVBAR -->
+<nav id="navbar">
+<div class="Logo_adv.png">
+<img src="../images/adventist-symbol--white.png" alt="Logo Adventista" style="width:54px;height:54px;object-fit:contain;" /></div>
+<div class="nav-center">
+    <ul class="nav-links">
+    <li><a href="../index.html">Início</a></li>
+    <li><a href="sobre.html">Sobre</a></li>
+    <li><a href="estudo.html">Estudo</a></li>
+    <li><a href="programacao.html">Programação</a></li>
+    </ul>
+</div>
+<button class="btn-contato" onclick="document.getElementById('sobre').scrollIntoView({behavior:'smooth'})">Contato</button>
+</nav>
 
+<main class="estudo">
+    <p>Aprofunde o conhecimento da Bíblia. Escolha um estudo para<br>acompanhar online, baixar o material ou solicitar um estudo presencial.</p>
+    
+    <section class="swiper mySwiper">
+
+    <div class="swiper-wrapper">
+
+      <div class="card swiper-slide">
+        <div class="card__image">
+          <img src="../images/Escola-sabatina.png" alt="card image">
         </div>
+
+        <div class="card__content">
+          <span class="card__title">Escola Sabatina</span>
+        </div>
+      </div>
+
+      <div class="card swiper-slide">
+        <div class="card__image">
+          <img src="../images/O-grande-conflito.png" alt="card image">
+        </div>
+
+        <div class="card__content">
+          <span class="card__title">O Grande Conflito</span>
+        </div>
+      </div>
+
+      <div class="card swiper-slide">
+        <div class="card__image">
+          <img src="../images/Ungidos.png" alt="card image">
+        </div>
+
+        <div class="card__content">
+          <span class="card__title">Ungidos</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  
+    
+    <div class="estudo-presencial">
         <p>Quer estudar a Bíblia conosco?</p>
-        <button>Solicitar estudo presencial</button>
-    </main>
+        <button class="btn-presencial">Solicitar estudo presencial</button>
+    </div>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo-row">
+    <img src="../images/adventist-symbol--white.png" alt="Logo Adventista" />
+      <span class="footer-name">Igreja Adventista do Sétimo Dia</span>
+    </div>
+    <div class="footer-divider"></div>
+    <ul class="footer-links">
+      <li><a href="../index.html">Início</a></li>
+      <li><a href="sobre.html">Sobre</a></li>
+      <li><a href="estudo.html">Estudo</a></li>
+      <li><a href="programacao.html">Programação</a></li>
+      <li><a href="../index.html#sobre">Contato</a></li>
+    </ul>
+    <p class="footer-copy">© 2026 Igreja Adventista do Sétimo Dia — Porto Batista, Triunfo/RS - Brasil</p>
+    <p class="footer-copy"> Desenvolvido por Wilian Leão, Vinicius Stangerlin e Varnderson Vargas.</p>
+  </div>
+</footer>
+<!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: 4,
+      coverflowEffect: {
+        rotate: 0,
+        stretch: 0,
+        depth: 300,
+        modifier: 1,
+        slideShadows: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+      },
+    });
+  </script>
 </body>
 </html>

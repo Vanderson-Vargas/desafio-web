@@ -1,4 +1,7 @@
-data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
+data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js";
+import Swiper from 'swiper';
+import 'swiper/css';
+import 'swiper/css/pagination';
 
 const navbar = document.getElementById("navbar");
   const hero = document.getElementById("inicio");
@@ -25,3 +28,22 @@ window.addEventListener("scroll", () => {
       }
     });
   }, { passive: true });
+
+  /*SWIPPER*/
+
+  var swiper = new Swiper(".mySwiper", {
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: "auto",
+      coverflowEffect: {
+        rotate: 0,
+        stretch: 0,
+        depth: 300,
+        modifier: 1,
+        slideShadows: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+      },
+    });
