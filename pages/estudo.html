@@ -26,52 +26,48 @@
 </nav>
 
 <main class="estudo">
-    <p>Aprofunde o conhecimento da Bíblia. Escolha um estudo para<br>acompanhar online, baixar o material ou solicitar um estudo presencial.</p>
+    <p id="estudo-descricao">Aprofunde o conhecimento da Bíblia. Escolha um estudo paraacompanhar online, baixar o material ou solicitar um estudo presencial.</p>
     
     <section class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <!-- <div class="card swiper-slide">
+          <img class="card_image" src="" alt="">
+          <span class="card_title">Card Title</span>
+        </div> -->
+      </div>
+    </section>
 
-    <div class="swiper-wrapper">
 
-      <div class="card swiper-slide">
-        <div class="card__image">
-          <img src="../images/Escola-sabatina.png" alt="card image">
-        </div>
-
-        <div class="card__content">
-          <span class="card__title">Escola Sabatina</span>
+    <div id="modal-container" class="modal-container">
+      <div class="modal">
+        <div class="modal-body">
+          <div class="modal-media">
+            <img id="modal-image" src="" alt="Imagem do estudo">
+          </div>
+          <div class="modal-content">
+            <h1 class="modal-title"></h1>
+            <p class="modal-description"></p>
+          </div>
+                
+          <!-- moved links under the image to sit below modal-media -->
+          <div class="modal-links-wrapper">
+            <ul class="modal-links">
+              <li><a href="#" id="link-pdf" target="_blank">Baixar PDF</a></li>
+              <li><a href="#" id="link-livro" target="_blank">Comprar Livro</a></li>
+              <li><a href="#" id="link-ytb" target="_blank">Youtube</a></li>
+              <li><a href="#" id="estudo-presencial" target="_blank">Estudo presencial</a></li>
+            </ul>
+          </div>
         </div>
       </div>
-
-      <div class="card swiper-slide">
-        <div class="card__image">
-          <img src="../images/O-grande-conflito.png" alt="card image">
-        </div>
-
-        <div class="card__content">
-          <span class="card__title">O Grande Conflito</span>
-        </div>
-      </div>
-
-      <div class="card swiper-slide">
-        <div class="card__image">
-          <img src="../images/Ungidos.png" alt="card image">
-        </div>
-
-        <div class="card__content">
-          <span class="card__title">Ungidos</span>
-        </div>
-      </div>
-
     </div>
-  </section>
-  
     
     <div class="estudo-presencial">
-        <p>Quer estudar a Bíblia conosco?</p>
-        <button class="btn-presencial">Solicitar estudo presencial</button>
+      <p>Quer estudar a Bíblia conosco?</p>
+      <button class="btn-presencial">Solicitar estudo presencial</button>
     </div>
-</main>
-
+  </main>
+  
 <footer>
   <div class="footer-inner">
     <div class="footer-logo-row">
@@ -92,25 +88,6 @@
 </footer>
 <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-  
-  <!-- Initialize Swiper -->
-  <script>
-    var swiper = new Swiper(".mySwiper", {
-      effect: "coverflow",
-      grabCursor: true,
-      centeredSlides: true,
-      slidesPerView: 4,
-      coverflowEffect: {
-        rotate: 0,
-        stretch: 0,
-        depth: 300,
-        modifier: 1,
-        slideShadows: false,
-      },
-      pagination: {
-        el: ".swiper-pagination",
-      },
-    });
-  </script>
+  <script src="../scripts/script.js"></script>
 </body>
 </html>
