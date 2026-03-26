@@ -358,11 +358,11 @@ html::-webkit-scrollbar {
 }
 
 .card__image{
-  width: 75%;
+  width: 90%;
   height: 40vh;
   max-height: 40vh;
   min-height: 40vh;
-  margin: 0 auto 1vh;
+  margin: 0 auto;
   padding: 3px;
   display: flex;
   align-items: center;
