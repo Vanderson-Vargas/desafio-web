@@ -1,0 +1,56 @@
+<nav id="navbar">
+  <div class="navbar-container">
+    <div class="navbar-logo">
+      <img
+        src="IMAGES_PATH"
+        alt="Logo Adventista"
+        style="width: 54px; height: 54px; object-fit: contain"
+      />
+    </div>
+
+    <div class="nav-center">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="INDEX_LINK">Início</a></li>
+        <li><a href="SOBRE_LINK">Sobre</a></li>
+        <li><a href="ESTUDO_LINK">Estudo</a></li>
+        <li><a href="PROGRAMACAO_LINK">Programação</a></li>
+      </ul>
+    </div>
+
+    <button
+      class="btn-contato"
+      onclick="
+        document.getElementById('sobre').scrollIntoView({ behavior: 'smooth' })
+      "
+    >
+      Contato
+    </button>
+
+    <button id="hamburger" class="hamburger" aria-label="Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+
+  <div id="mobileMenu" class="mobile-menu">
+    <ul class="mobile-nav-links">
+      <li><a href="INDEX_LINK">Início</a></li>
+      <li><a href="SOBRE_LINK">Sobre</a></li>
+      <li><a href="ESTUDO_LINK">Estudo</a></li>
+      <li><a href="PROGRAMACAO_LINK">Programação</a></li>
+      <li>
+        <button
+          class="mobile-btn-contato"
+          onclick="
+            document
+              .getElementById('sobre')
+              .scrollIntoView({ behavior: 'smooth' })
+          "
+        >
+          Contato
+        </button>
+      </li>
+    </ul>
+  </div>
+</nav>

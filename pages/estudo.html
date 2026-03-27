@@ -1,94 +1,71 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../styles/style.css" rel="stylesheet" >
-    <!-- Link Swiper's CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../styles/style.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+    <link href="estudo.css" rel="stylesheet" />
     <title>Estudo</title>
-</head>
-<body class="estudo-page">
-    
-<!-- NAVBAR -->
-<nav id="navbar">
-<div class="Logo_adv.png">
-<img src="../images/adventist-symbol--white.png" alt="Logo Adventista" style="width:54px;height:54px;object-fit:contain;" /></div>
-<div class="nav-center">
-    <ul class="nav-links">
-    <li><a href="../index.html">Início</a></li>
-    <li><a href="sobre.html">Sobre</a></li>
-    <li><a href="estudo.html">Estudo</a></li>
-    <li><a href="programacao.html">Programação</a></li>
-    </ul>
-</div>
-<button class="btn-contato" onclick="document.getElementById('sobre').scrollIntoView({behavior:'smooth'})">Contato</button>
-</nav>
+  </head>
+  <body class="estudo-page">
+    <main class="estudo">
+      <p id="estudo-descricao">
+        Aprofunde o conhecimento da Bíblia. Escolha um estudo paraacompanhar
+        online, baixar o material ou solicitar um estudo presencial.
+      </p>
 
-<main class="estudo">
-    <p id="estudo-descricao">Aprofunde o conhecimento da Bíblia. Escolha um estudo paraacompanhar online, baixar o material ou solicitar um estudo presencial.</p>
-    
-    <section class="swiper mySwiper">
-      <div class="swiper-wrapper">
-        <!-- <div class="card swiper-slide">
+      <section class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <!-- <div class="card swiper-slide">
           <img class="card_image" src="" alt="">
           <span class="card_title">Card Title</span>
         </div> -->
-      </div>
-    </section>
+        </div>
+      </section>
 
+      <div id="modal-container" class="modal-container">
+        <div class="modal">
+          <div class="modal-body">
+            <div class="modal-media">
+              <img id="modal-image" src="" alt="Imagem do estudo" />
+            </div>
+            <div class="modal-content">
+              <h1 class="modal-title"></h1>
+              <p class="modal-description"></p>
+            </div>
 
-    <div id="modal-container" class="modal-container">
-      <div class="modal">
-        <div class="modal-body">
-
-          <div class="modal-media">
-            <img id="modal-image" src="" alt="Imagem do estudo">
-          </div>
-          <div class="modal-content">
-            <h1 class="modal-title"></h1>
-            <p class="modal-description"></p>
-          </div>
-                
-          <!-- moved links under the image to sit below modal-media -->
-          <div class="modal-links-wrapper">
-            <ul class="modal-links">
-              <li><a href="#" id="link-pdf" target="_blank">Baixar PDF</a></li>
-              <li><a href="#" id="link-livro" target="_blank">Comprar Livro</a></li>
-              <li><a href="#" id="link-ytb" target="_blank">Youtube</a></li>
-              <li><a href="#" id="estudo-presencial" target="_blank">Estudo presencial</a></li>
-            </ul>
+            <div class="modal-links-wrapper">
+              <ul class="modal-links">
+                <li>
+                  <a href="#" id="link-pdf" target="_blank">Baixar PDF</a>
+                </li>
+                <li>
+                  <a href="#" id="link-livro" target="_blank">Comprar Livro</a>
+                </li>
+                <li><a href="#" id="link-ytb" target="_blank">Youtube</a></li>
+                <li>
+                  <a href="#" id="estudo-presencial" target="_blank"
+                    >Estudo presencial</a
+                  >
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    
-    <div class="estudo-presencial">
-      <p>Quer estudar a Bíblia conosco?</p>
-      <button class="btn-presencial">Solicitar estudo presencial</button>
-    </div>
-  </main>
-  
-<footer>
-  <div class="footer-inner">
-    <div class="footer-logo-row">
-    <img src="../images/adventist-symbol--white.png" alt="Logo Adventista" />
-      <span class="footer-name">Igreja Adventista do Sétimo Dia</span>
-    </div>
-    <div class="footer-divider"></div>
-    <ul class="footer-links">
-      <li><a href="../index.html">Início</a></li>
-      <li><a href="sobre.html">Sobre</a></li>
-      <li><a href="estudo.html">Estudo</a></li>
-      <li><a href="programacao.html">Programação</a></li>
-      <li><a href="../index.html#sobre">Contato</a></li>
-    </ul>
-    <p class="footer-copy">© 2026 Igreja Adventista do Sétimo Dia — Porto Batista, Triunfo/RS - Brasil</p>
-    <p class="footer-copy"> Desenvolvido por Wilian Leão, Vinicius Stangerlin e Varnderson Vargas.</p>
-  </div>
-</footer>
-<!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-  <script src="../scripts/script.js"></script>
-</body>
+
+      <div class="estudo-presencial">
+        <p>Quer estudar a Bíblia conosco?</p>
+        <button class="btn-presencial">Solicitar estudo presencial</button>
+      </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="../scripts/script.js"></script>
+    <script src="./estudo.js"></script>
+  </body>
 </html>

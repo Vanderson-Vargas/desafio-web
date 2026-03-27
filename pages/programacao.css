@@ -1,0 +1,70 @@
+.programacao-main {
+  background-image: url("../images/Fundo_tela_de_programacao.png");
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 2rem 2rem;
+}
+
+.programacao-container {
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: row;
+  padding: 4rem;
+  gap: 3rem;
+  max-width: 900px;
+  width: 100%;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+}
+
+.programacao-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.programacao-divider {
+  width: 2px;
+  background-color: #fff;
+  border-radius: 2px;
+}
+
+.programacao-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.programacao-item h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+
+.programacao-item p {
+  font-size: 1.1rem;
+  font-weight: 400;
+  opacity: 0.9;
+}
+
+@media screen and (max-width: 800px) {
+  .programacao-container {
+    flex-direction: column;
+    padding: 2.5rem;
+    gap: 2rem;
+  }
+  .programacao-divider {
+    width: 100%;
+    height: 2px;
+  }
+}

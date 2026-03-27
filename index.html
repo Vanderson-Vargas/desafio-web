@@ -8,25 +8,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
   <link href="styles/style.css" rel="stylesheet" >
+  <link href="index.css" rel="stylesheet" >
 </head>
 <body>
 
-<!-- NAVBAR -->
-<nav id="navbar">
-<div class="Logo_adv.png">
-<img src="images/adventist-symbol--white.png" alt="Logo Adventista" style="width:54px;height:54px;object-fit:contain;" /></div>
-  <div class="nav-center">
-    <ul class="nav-links">
-      <li><a href="#inicio">Início</a></li>
-      <li><a href="pages/sobre.html">Sobre</a></li>
-      <li><a href="pages/estudo.html">Estudo</a></li>
-      <li><a href="pages/programacao.html">Programação</a></li>
-    </ul>
-  </div>
-  <button class="btn-contato" onclick="document.getElementById('sobre').scrollIntoView({behavior:'smooth'})">Contato</button>
-</nav>
-
-<!-- inicio -->
 <section id="inicio">
   <div class="hero-bg"></div>
   <div class="hero-content">
@@ -42,12 +27,10 @@
   </div>
 </section>
 
-<!-- missao -->
 <section id="sobre">
   <h2 class="missao-title reveal">Nossa Missão:</h2>
 
   <div class="missao-cards">
-    <!-- amor -->
     <div class="missao-card reveal">
       <div class="missao-icon">
        <img src="references/Amor.png" alt="Amor" />
@@ -55,7 +38,6 @@
       <span class="missao-label">Amor</span>
     </div>
 
-    <!-- apoio -->
     <div class="missao-card reveal" style="transition-delay:0.15s">
       <div class="missao-icon">
        <img src="references/Apoio.png" alt="Amor" />
@@ -63,7 +45,6 @@
       <span class="missao-label">Apoio</span>
     </div>
 
-    <!-- uniao -->
     <div class="missao-card reveal" style="transition-delay:0.3s">
       <div class="missao-icon">
 <img src="references/Uniao.png" alt="Amor" />      </div>
@@ -71,7 +52,6 @@
     </div>
   </div>
 
-  <!-- linha do contato  -->
   <div class="contact-row">
     <div class="contact-left reveal">
       <div class="contact-info-item">
@@ -113,25 +93,6 @@
   </div>
 </section>
 
-<!-- r -->
-<footer>
-  <div class="footer-inner">
-    <div class="footer-logo-row">
-    <img src="images/adventist-symbol--white.png" alt="Logo Adventista" />
-      <span class="footer-name">Igreja Adventista do Sétimo Dia</span>
-    </div>
-    <div class="footer-divider"></div>
-    <ul class="footer-links">
-      <li><a href="#inicio">Início</a></li>
-      <li><a href="pages/sobre.html">Sobre</a></li>
-      <li><a href="pages/estudo.html">Estudo</a></li>
-      <li><a href="pages/programacao.html">Programação</a></li>
-      <li><a href="#">Contato</a></li>
-    </ul>
-    <p class="footer-copy">© 2026 Igreja Adventista do Sétimo Dia — Porto Batista, Triunfo/RS - Brasil</p>
-    <p class="footer-copy"> Desenvolvido por Wilian Leão, Vinicius Stangerlin e Varnderson Vargas.</p>
-  </div>
-</footer>
-<!--<script src="scripts/script.js"></script>-->
+<script src="scripts/script.js"></script>
 </body>
 </html>

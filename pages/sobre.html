@@ -1,47 +1,91 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../styles/style.css" rel="stylesheet" >
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../styles/style.css" rel="stylesheet" />
+    <link href="sobre.css" rel="stylesheet" />
     <title>Sobre</title>
-</head>
-<body class="sobre-page">
-        
-<!-- NAVBAR -->
-<nav id="navbar">
-<div class="Logo_adv.png">
-<img src="../images/adventist-symbol--white.png" alt="Logo Adventista" style="width:54px;height:54px;object-fit:contain;" /></div>
-<div class="nav-center">
-    <ul class="nav-links">
-    <li><a href="../index.html">Início</a></li>
-    <li><a href="sobre.html">Sobre</a></li>
-    <li><a href="estudo.html">Estudo</a></li>
-    <li><a href="programacao.html">Programação</a></li>
-    </ul>
-</div>
-<button class="btn-contato" onclick="document.getElementById('sobre').scrollIntoView({behavior:'smooth'})">Contato</button>
-</nav>
+  </head>
+  <body class="sobre-page">
+    <main class="sobre-content">
+      <div class="sobre-container">
+        <h1 class="sobre-title">NOSSOS VALORES</h1>
 
-<main class="provisorio"></main>
+        <div class="sobre-grid">
+          <div class="pastor-info">
+            <h2 class="pastor-title">NOSSO PASTOR</h2>
+            <p class="pastor-text">
+              Euzélio Vaz Filho nasceu no Rio<br />de Janeiro e atua como
+              Pastor<br />Titular na IASD Floresta desde o<br />mês de dezembro
+              de 2022.
+            </p>
+          </div>
 
-<footer>
-  <div class="footer-inner">
-    <div class="footer-logo-row">
-    <img src="../images/adventist-symbol--white.png" alt="Logo Adventista" />
-      <span class="footer-name">Igreja Adventista do Sétimo Dia</span>
-    </div>
-    <div class="footer-divider"></div>
-    <ul class="footer-links">
-      <li><a href="../index.html">Início</a></li>
-      <li><a href="sobre.html">Sobre</a></li>
-      <li><a href="estudo.html">Estudo</a></li>
-      <li><a href="programacao.html">Programação</a></li>
-      <li><a href="../index.html#sobre">Contato</a></li>
-    </ul>
-    <p class="footer-copy">© 2026 Igreja Adventista do Sétimo Dia — Porto Batista, Triunfo/RS - Brasil</p>
-    <p class="footer-copy"> Desenvolvido por Wilian Leão, Vinicius Stangerlin e Varnderson Vargas.</p>
-  </div>
-</footer>
-</body>
+          <div class="pastor-image-container">
+            <img
+              src="../images/pastor.png"
+              alt="Pastor Euzélio Vaz Filho"
+              class="pastor-img"
+            />
+          </div>
+
+          <div class="valores-list">
+            <div class="valor-item">
+              <h3>O Evangelho é Cristo</h3>
+              <p>Valorizamos a fé e a pregação centralizada em Jesus.</p>
+            </div>
+            <div class="valor-item">
+              <h3>Tudo começa pela graça</h3>
+              <p>
+                Valorizamos uma religião impulsionada pela compreensão
+                verdadeira do amor de Deus.
+              </p>
+            </div>
+            <div class="valor-item">
+              <h3>A Bíblia é a verdade que liberta</h3>
+              <p>Valorizamos a Palavra de Deus como regra de fé e prática</p>
+            </div>
+            <div class="valor-item">
+              <h3>Princípios são eternos, culturas são mutáveis</h3>
+              <p>
+                Valorizamos a contextualização do Evangelho, sem abrir mão da
+                fidelidade dos princípios
+              </p>
+            </div>
+            <div class="valor-item">
+              <h3>A conversão é obra do Espírito Santo</h3>
+              <p>
+                Valorizamos a compreensão de que somente Deus pode trazer a real
+                transformação
+              </p>
+            </div>
+            <div class="valor-item">
+              <h3>Servimos a Deus com a excelência</h3>
+              <p>
+                Valorizamos a adoração e serviço voluntário feitos da melhor
+                forma possível
+              </p>
+            </div>
+            <div class="valor-item">
+              <h3>A igreja são as pessoas</h3>
+              <p>
+                Valorizamos a comunidade como uma família. Igreja como pessoas e
+                não edifícios
+              </p>
+            </div>
+            <div class="valor-item">
+              <h3>Sou discípulo a todo tempo</h3>
+              <p>
+                Valorizamos uma vida de discipulado. 24h por dia, 7 dias por
+                semana
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="../scripts/script.js"></script>
+  </body>
 </html>
