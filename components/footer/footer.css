@@ -1,0 +1,115 @@
+footer {
+  background: var(--navy);
+  color: rgba(255, 255, 255, 0.82);
+  padding: 2.5rem 2rem;
+  text-align: center;
+}
+
+.footer-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.footer-logo-row {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.footer-logo-row img {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+.footer-name {
+  font-family: "ChalgaVP", serif;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.92);
+  letter-spacing: 0.12em;
+}
+
+.footer-divider {
+  width: 60px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.footer-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.58);
+  text-decoration: none;
+  font-size: 0.88rem;
+  letter-spacing: 0.04em;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover {
+  color: var(--white);
+}
+
+.footer-copy {
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.38);
+  letter-spacing: 0.04em;
+  margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+  footer {
+    padding: 2rem 1.5rem;
+  }
+
+  .footer-inner {
+    gap: 1rem;
+  }
+
+  .footer-links {
+    gap: 1.5rem;
+  }
+
+  .footer-copy {
+    font-size: 0.75rem;
+    padding: 0 0.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  footer {
+    padding: 1.5rem 1rem;
+  }
+
+  .footer-logo-row {
+    gap: 0.6rem;
+  }
+
+  .footer-logo-row img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .footer-name {
+    font-size: 0.9rem;
+  }
+
+  .footer-links {
+    gap: 1rem;
+    flex-direction: column;
+  }
+
+  .footer-links a {
+    font-size: 0.8rem;
+  }
+}

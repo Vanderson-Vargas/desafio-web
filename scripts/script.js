@@ -1,124 +1,110 @@
-document.addEventListener('DOMContentLoaded', function() {
-  const navbar = document.getElementById("navbar");
-  const hero = document.getElementById("inicio");
+async function carregarNavbar() {
+  const pathPrefix = window.location.pathname.includes('/pages/') ? '../' : './';
+  const isInPages = window.location.pathname.includes('/pages/');
+  const isMobile = window.innerWidth <= 768;
 
-  function updateNav() {
-    const scrollY = window.scrollY;
-    if (navbar) navbar.classList.toggle("scrolled", scrollY > 60);
-    if (navbar && hero) {
-      navbar.classList.toggle("dark-links", scrollY + 80 >= (hero.offsetTop + hero.offsetHeight));
+  const links = {
+    IMAGES_PATH: isMobile ? `${pathPrefix}images/adventist-symbol--black.png` : `${pathPrefix}images/adventist-symbol--white.png`,
+    INDEX_LINK: isInPages ? '../index.html' : '#inicio',
+    SOBRE_LINK: isInPages ? 'sobre.html' : 'pages/sobre.html',
+    ESTUDO_LINK: isInPages ? 'estudo.html' : 'pages/estudo.html',
+    PROGRAMACAO_LINK: isInPages ? 'programacao.html' : 'pages/programacao.html'
+  };
+
+  try {
+    if (!document.querySelector('link[href*="navbar.css"]')) {
+      const link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = `${pathPrefix}components/navbar/navbar.css`;
+      document.head.appendChild(link);
     }
-  }
-  window.addEventListener("scroll", updateNav, { passive: true });
-  updateNav();
 
-  const sections = document.querySelectorAll("section[id]");
-  const navLinks = document.querySelectorAll(".nav-links a");
-  window.addEventListener("scroll", () => {
-    let cur = "";
-    sections.forEach(s => { if (window.scrollY >= s.offsetTop - 100) cur = s.id; });
-    navLinks.forEach(a => {
-      const href = a.getAttribute("href");
-      if (href === "#inicio") {
-        a.classList.remove("active");
-      } else {
-        a.classList.toggle("active", href === "#" + cur);
-      }
+    const response = await fetch(`${pathPrefix}components/navbar/navbar.html`);
+    if (!response.ok) throw new Error('Erro ao carregar navbar');
+    let navbarHTML = await response.text();
+
+    Object.entries(links).forEach(([placeholder, url]) => {
+      navbarHTML = navbarHTML.replace(new RegExp(placeholder, 'g'), url);
     });
-  }, { passive: true });
 
-  /* SWIPER */
-  var swiper = new Swiper(".mySwiper", {
-    effect: "coverflow",
-    grabCursor: true,
-    centeredSlides: true,
-    slidesPerView: 4,
+    if (document.querySelector('body > nav')) {
+      document.querySelector('body > nav').outerHTML = navbarHTML;
+    } else {
+      document.body.insertAdjacentHTML('afterbegin', navbarHTML);
+    }
 
-    simulateTouch: true,
-    allowTouchMove: true,
-    clickable: true,
+    setupHamburguer();
+  } catch (error) {
+    console.error('Erro ao carregar navbar:', error);
+  }
+}
 
-    coverflowEffect: {
-      rotate: 0,
-      stretch: 0,
-      depth: 0,
-      modifier: 1,
-      slideShadows: false,
-    },
-    pagination: {
-      el: ".swiper-pagination",
-    },
+function setupHamburguer() {
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const navLinks = document.querySelectorAll('.mobile-nav-links a, .mobile-nav-links button');
+
+  if (!hamburger) return;
+
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    mobileMenu.classList.toggle('active');
   });
 
-  /* JSON */
-  function carregarEstudos() {
-    return fetch('../config/estudos.json')
-      .then(response => {
-        if (!response.ok) throw new Error('Falha ao buscar estudos.json: ' + response.status);
-        return response.json();
-      })
-      .then(estudos => {
-        const container = document.querySelector('.swiper-wrapper');
-        if (!container) return;
-        estudos.forEach(estudo => {
-          const card = document.createElement('div');
-          card.classList.add('card', 'swiper-slide');
-          
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('active');
+      mobileMenu.classList.remove('active');
+    });
+  });
 
-          const img = document.createElement('img');
-          img.classList.add('card__image');
-          img.src = estudo.imagem;
-          img.alt = estudo.nome || 'card image';
-
-          const title = document.createElement('span');
-          title.classList.add('card__title');
-          title.textContent = estudo.nome || '';
-
-          card.addEventListener('click', () => {
-            openModal(estudo);
-          });
-
-          card.appendChild(img);
-          card.appendChild(title);
-          container.appendChild(card);
-        });
-        if (swiper && typeof swiper.update === 'function') swiper.update();
-      })
-      .catch(error => console.error('Erro ao carregar estudos:', error));
-  }
-
-  carregarEstudos();
-});
-
-/*MODAL*/
-
-function openModal(estudo){
-    const modal = document.getElementById('modal-container')
-    if (!modal) return;
-    
-    // Preencher o modal com os dados do estudo
-    const h1 = modal.querySelector('h1');
-    const p = modal.querySelector('p');
-    const img = modal.querySelector('#modal-image');
-    const linkPdf = modal.querySelector('#link-pdf');
-    const linkLivro = modal.querySelector('#link-livro');
-    const linkYtb = modal.querySelector('#link-ytb');
-    const estudoPresencial = modal.querySelector('#estudo-presencial');
-    
-    if (h1) h1.textContent = estudo.nome || 'Estudo';
-    if (p) p.textContent = estudo.descricao || '';
-    if (img) img.src = estudo.imagem || '';
-    if (linkPdf) linkPdf.href = estudo.pdf || '#';
-    if (linkLivro) linkLivro.href = estudo.livro || '#';
-    if (linkYtb) linkYtb.href = estudo.youtube || '#';
-    if (estudoPresencial) estudoPresencial.href = '#' || '#';
-    
-    modal.classList.add('mostrar')
-
-    modal.addEventListener('click', (e) =>{
-        if (e.target.id == 'modal-container' || e.target.id == "fechar"){
-            modal.classList.remove('mostrar')
-            localStorage.fechaModal = 'modal-container'
-        }
-    })
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) {
+      hamburger.classList.remove('active');
+      mobileMenu.classList.remove('active');
+    }
+  });
 }
+
+async function carregarFooter() {
+  const pathPrefix = window.location.pathname.includes('/pages/') ? '../' : './';
+  const isInPages = window.location.pathname.includes('/pages/');
+
+  const links = {
+    IMAGES_PATH: `${pathPrefix}images/adventist-symbol--white.png`,
+    INDEX_LINK: isInPages ? '../index.html' : '#inicio',
+    SOBRE_LINK: isInPages ? 'sobre.html' : 'pages/sobre.html',
+    ESTUDO_LINK: isInPages ? 'estudo.html' : 'pages/estudo.html',
+    PROGRAMACAO_LINK: isInPages ? 'programacao.html' : 'pages/programacao.html',
+    CONTATO_LINK: isInPages ? '../index.html#sobre' : '#sobre'
+  };
+
+  try {
+    if (!document.querySelector('link[href*="footer.css"]')) {
+      const link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = `${pathPrefix}components/footer/footer.css`;
+      document.head.appendChild(link);
+    }
+
+    const response = await fetch(`${pathPrefix}components/footer/footer.html`);
+    if (!response.ok) throw new Error('Erro ao carregar footer');
+    let footerHTML = await response.text();
+
+    Object.entries(links).forEach(([placeholder, url]) => {
+      footerHTML = footerHTML.replace(new RegExp(placeholder, 'g'), url);
+    });
+
+    if (document.querySelector('body > footer')) {
+      document.querySelector('body > footer').outerHTML = footerHTML;
+    } else {
+      document.body.insertAdjacentHTML('beforeend', footerHTML);
+    }
+  } catch (error) {
+    console.error('Erro ao carregar footer:', error);
+  }
+}
+
+carregarNavbar();
+carregarFooter();
+
