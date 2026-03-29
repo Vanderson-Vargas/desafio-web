@@ -102,7 +102,7 @@ function openModal(estudo) {
     if (linkPdf) linkPdf.href = estudo.pdf || '#';
     if (linkLivro) linkLivro.href = estudo.livro || '#';
     if (linkYtb) linkYtb.href = estudo.youtube || '#';
-    if (estudoPresencial) estudoPresencial.href = '#' || '#';
+    if (estudoPresencial) estudoPresencial.href = 'https://wa.me/5551997228925' || '#';
 
     modal.classList.add('mostrar')
 

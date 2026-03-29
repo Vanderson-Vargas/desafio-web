@@ -318,7 +318,6 @@
     max-width: 100%;
   }
 
-  /* 👇 CORREÇÃO PRINCIPAL */
   .modal-links-wrapper {
     width: 100%;
     max-width: 80vw;
@@ -327,7 +326,7 @@
 
   .modal-links {
     width: 100%;
-    flex-wrap: wrap; /* 👈 permite quebrar linha */
+    flex-wrap: wrap;
     justify-content: center;
     gap: 8px;
   }
@@ -345,6 +344,6 @@
   }
 
   .modal-links li:last-child {
-    margin-left: 0; /* 👈 remove aquele empurrão estranho */
+    margin-left: 0; 
   }
 }
