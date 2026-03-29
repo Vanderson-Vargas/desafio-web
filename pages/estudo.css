@@ -307,10 +307,44 @@
 @media screen and (max-width: 500px) {
   .card {
     padding: 0.8em;
-    width: 100vw;
+    width: 100%;
   }
-  .swiper-slide {
+
+  #modal-image {
+    max-width: 100%;
   }
-  .card__image {
+
+  .modal-content {
+    max-width: 100%;
+  }
+
+  /* 👇 CORREÇÃO PRINCIPAL */
+  .modal-links-wrapper {
+    width: 100%;
+    max-width: 80vw;
+    margin: 0 auto;
+  }
+
+  .modal-links {
+    width: 100%;
+    flex-wrap: wrap; /* 👈 permite quebrar linha */
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .modal-links li {
+    flex: 1 1 auto;
+  }
+
+  .modal-links li a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 0.75rem;
+    padding: 6px 10px;
+  }
+
+  .modal-links li:last-child {
+    margin-left: 0; /* 👈 remove aquele empurrão estranho */
   }
 }

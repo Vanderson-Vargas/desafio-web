@@ -14,29 +14,5 @@
         "pdf": "https://ellenwhite.cpb.com.br/livro/index/1",
         "livro": "https://cpb.com.br/produto/14866/o-grande-conflito-edicao-atualizada-capa-dura?srsltid=AfmBOoo5sDDWuvI1srVv1errJGHj8VwAPU233iV3uSG4AIWjhCCOn6Ug",
         "youtube": "https://www.youtube.com/channel/UC9n8l3mXo2s5j6v1Z5z7gA"
-    },
-    {
-        "nome": "Ungidos",
-        "imagem": "../images/Ungidos.png",
-        "descricao": "Ungidos é um livro que aborda o papel dos ungidos no plano de salvação.",
-        "pdf": "pdf/Ungidos.pdf",
-        "livro": "pdf/Ungidos-livro.pdf",
-        "youtube": "https://www.youtube.com/channel/UC9n8l3mXo2s5j6v1Z5z7gA"
-    },
-    {
-        "nome": "O Desejado de Todas as Nações Todas as Nações",
-        "imagem": "../images/Pastor.png",
-        "descricao": "O Desejado de Todas as Nações é um livro que explora a vida e os ensinamentos de Jesus Cristo.",
-        "pdf": "pdf/O-desejado-de-todas-as-nacoes.pdf",
-        "livro": "pdf/O-desejado-de-todas-as-nacoes-livro.pdf",
-        "youtube": "https://www.youtube.com/channel/UC9n8l3mXo2s5j6v1Z5z7gA"
-    },
-    {
-        "nome": "O Caminho a Cristo",
-        "imagem": "../images/Escola-sabatina.png",
-        "descricao": "O Caminho a Cristo é um livro que apresenta os passos para uma vida cristã autêntica.",
-        "pdf": "pdf/O-caminho-a-cristo.pdf",
-        "livro": "pdf/O-caminho-a-cristo-livro.pdf",
-        "youtube": "https://www.youtube.com/channel/UC9n8l3mXo2s5j6v1Z5z7gA"
     }
 ]

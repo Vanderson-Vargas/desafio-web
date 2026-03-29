@@ -279,3 +279,10 @@
   border-radius: 2px;
   animation: scroll-wheel 1.5s ease infinite;
 }
+
+@media screen and (max-width: 1200px) {
+  .hero-title {
+    line-height: 60px;
+    width: 90vw;
+  }
+}

@@ -1,7 +1,7 @@
 [
     {
         "name": "Culto Divino",
-        "time": "Sábados às 08h e 10h15"
+        "time": "Sábados às 10:20h"
     },
     {
         "name": "Escola Sabatina",
@@ -9,18 +9,18 @@
     },
     {
         "name": "Culto de Oração",
-        "time": "Quartas às 20h"
+        "time": "Quintas às 19:30h"
     },
     {
         "name": "Desbravadores",
-        "time": "Domingos às 9h"
+        "time": "Domingos às 14h"
     },
     {
-        "name": "Culto de Louvor",
+        "name": "Grupo de Oração",
         "time": "Domingos às 19h30"
     },
     {
         "name": "Aventureiros",
-        "time": "Domingos às 9h30"
+        "time": "Indeterminado"
     }
 ]

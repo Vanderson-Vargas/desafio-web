@@ -37,14 +37,19 @@ function carregarEstudos() {
 carregarEstudos();
 
 var swiper = new Swiper(".mySwiper", {
-    effect: "coverflow",
     grabCursor: true,
-    centeredSlides: true,
-    slidesPerView: 4,
-
     simulateTouch: true,
     allowTouchMove: true,
-    clickable: true,
+
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+
+    // Config padrão
+    effect: "coverflow",
+    centeredSlides: false,
+    slidesPerView: 4,
 
     coverflowEffect: {
         rotate: 0,
@@ -53,9 +58,30 @@ var swiper = new Swiper(".mySwiper", {
         modifier: 1,
         slideShadows: false,
     },
-    pagination: {
-        el: ".swiper-pagination",
-    },
+
+    
+    breakpoints: {
+        // Mobile
+        0: {
+            slidesPerView: 1.2,
+            effect: "slide",
+            centeredSlides: false,
+        },
+
+        // Tablet
+        768: {
+            slidesPerView: 2,
+            effect: "slide",
+            centeredSlides: false,
+        },
+
+        // Desktop
+        1024: {
+            slidesPerView: 4,
+            effect: "coverflow",
+            centeredSlides: false,
+        }
+    }
 });
 
 function openModal(estudo) {
