@@ -3,9 +3,9 @@
         "nome": "Escola Sabatina",
         "imagem": "../images/Escola-sabatina.png",
         "descricao": "A Lição da Escola Sabatina dos Adultos é preparada pelo Departamento da Escola Sabatina e Ministério Pessoal da Associação Geral dos Adventistas do Sétimo Dia. ",
-        "pdf": "pdf/EscolaSabatina.pdf",
-        "livro": "pdf/EscolaSabatinaLivro.pdf",
-        "youtube": "https://www.youtube.com/channel/UC9n8l3mXo2s5j6v1Z5z7gA"
+        "pdf": "https://info.cpb.com.br/lp-licoes-1-trimestre-2026",
+        "livro": "https://cpb.com.br/categoria/7/1444/escola-sabatina/todas-as-licoes",
+        "youtube": "https://youtube.com/playlist?list=PL0jEkDknqpGI-aRHvonTxt-PZb1bKJ54U&si=Rn91z90rzrVFvwk8"
     },
     {
         "nome": "O Grande Conflito",
@@ -13,6 +13,14 @@
         "descricao": "O Grande Conflito é um livro que explora a luta entre o bem e o mal.",
         "pdf": "https://ellenwhite.cpb.com.br/livro/index/1",
         "livro": "https://cpb.com.br/produto/14866/o-grande-conflito-edicao-atualizada-capa-dura?srsltid=AfmBOoo5sDDWuvI1srVv1errJGHj8VwAPU233iV3uSG4AIWjhCCOn6Ug",
-        "youtube": "https://www.youtube.com/channel/UC9n8l3mXo2s5j6v1Z5z7gA"
+        "youtube": "https://youtube.com/playlist?list=PLZzUHCA4d0QywGcTXKLMsGiIJ9ZfkOXWO&si=t0ISbQnjb00K7rjm"
+    },
+    {
+        "nome": "O Grande Conflito",
+        "imagem": "../images/O-grande-conflito-estudo.png",
+        "descricao": "O Grande Conflito é um estudo bíblico que explora diversas profecias.",
+        "pdf": "../images/ograndeconflitoestudo.pdf",
+        "livro": "../images/ograndeconflitoestudo.pdf",
+        "youtube": "https://youtu.be/eejZx3fFnaw?si=aXKxfTdf482fZXmr"
     }
 ]
